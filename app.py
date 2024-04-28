@@ -5,6 +5,8 @@ import pandas as pd
 import pickle
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
 
 # Declaring the teams
 
