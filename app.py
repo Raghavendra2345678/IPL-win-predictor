@@ -125,6 +125,7 @@ else:
                                 'cur_run_rate': [currentrunrate], 
                                 'req_run_rate': [requiredrunrate]})
                 # Loading the trained machine learning pipeline to make the prediction
+                pipe = pickle.load(open('pipe.pkl', 'rb'))
                 result = pipe.predict_proba(input_df)
                 
                 # Extracting the likelihood of loss and win
