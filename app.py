@@ -5,8 +5,6 @@ import pandas as pd
 import pickle
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LogisticRegression
 
 # Declaring the teams
 
@@ -107,7 +105,7 @@ else:
                 balls_left = 120-(overs*6)
                 
                 # Calculating the number of wickets left for the batting team
-                wickets = 10-wickets
+                wickets_left = 10-wickets
                 
                 # Calculating the current Run-Rate of the batting team
                 currentrunrate = score/overs
@@ -122,7 +120,7 @@ else:
                                 'city': [city], 
                                 'runs_left': [runs_left], 
                                 'balls_left': [balls_left],
-                                'wickets': [wickets], 
+                                'wickets_left': [wickets_left], 
                                 'total_runs_x': [target], 
                                 'cur_run_rate': [currentrunrate], 
                                 'req_run_rate': [requiredrunrate]})
